@@ -1,0 +1,17 @@
+<div class="corpoCliente">
+    <div class="corpoClienteTitulo">
+        <span>Contatos</span>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let cabecalho of getKeys(listaUsuarios)">{{ cabecalho }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuario of listaUsuarios" (click)="abrirChat(usuario)">
+                <td>{{usuario.apelido}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

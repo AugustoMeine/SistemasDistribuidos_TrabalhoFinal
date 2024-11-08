@@ -1,0 +1,12 @@
+<div class="chat-container">
+  <div class="messages">
+    <div *ngFor="let mensagem of listaMensagem" [ngClass]="{'message-sent': mensagem.idUsuarioRemetente === usuario.id, 'message-received': mensagem.idUsuarioRemetente !== usuario.id}" class="message">
+      <span class="message-user">{{ consultarNome(mensagem.idUsuarioRemetente) }}:</span>
+      <span>{{ mensagem.mensagem }}</span>
+    </div>
+  </div>
+  <div class="input-container">
+    <input [(ngModel)]="mensagemTexto" placeholder="Digite sua mensagem..." />
+    <button (click)="enviarMensagem()">Enviar</button>
+  </div>
+</div>

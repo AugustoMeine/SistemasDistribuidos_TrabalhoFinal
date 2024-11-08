@@ -1,0 +1,82 @@
+:root{
+    --var-cor-fundo: #000000;
+    --var-cor-fundo-escuro: #1C1C1C;
+    --var-cor-letra: #FFFFFF;
+    --var-cor-primaria: #39FF14;
+    --var-cor-secundaria: #2F2F2F;
+    --var-cor-verde:#39FF14;
+    --var-cor-verde-claro:#90ee90;
+    --var-cor-verde-escuro:#26a710;
+    --var-cor-verde-escuro-plus:#1c790c;
+    --var-cor-verde-borda-escura:rgb(28, 119, 12);
+    --font-size-base: 0.8vw;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;    
+    background-color: var(--var-cor-fundo);
+    font-size: var(--font-size-base);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: var(--var-cor-letra);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.btn {   
+    color: var(--var-cor-letra);
+    border: 1px solid var(--var-cor-verde-borda-escura); 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 1rem; /* Ensure button text scales with base font size */
+}
+
+.btn:hover {    
+    color: var(--var-cor-letra);
+}
+
+.btn-verde {
+    background-color: var(--var-cor-verde);
+}
+
+.btn-verde:hover {
+    background-color: #2F2F2F;
+}
+
+.btn-vermelho {
+    background-color: #A9A9A9;
+}
+
+.btn-vermelho:hover {
+    background-color: #2F2F2F;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1200px) {
+    :root {
+        --font-size-base: 1.1vw;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --font-size-base: 1.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-base: 1.5vw;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --font-size-base: 1.75vw;
+    }
+}

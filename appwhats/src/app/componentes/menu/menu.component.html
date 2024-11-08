@@ -1,0 +1,38 @@
+<div class="corpoMenu">
+    <!-- 
+        CABEÇALHO
+    -->
+    <div class="cabecalho">
+        <div class="logo" (click)="direcionarParaOMenu()">
+            <img src="svg/chat.svg" alt="-">
+            <span>AppWhats</span>
+        </div>
+
+        <div class="usuario" (click)="deslogar()" (mouseover)="hover = true" (mouseout)="hover = false">
+            <div [ngClass]="{'hovered': hover}">
+                {{ hover ? 'Deslogar' : letrasNome }}
+            </div>
+        </div>
+    </div>
+
+    <!-- 
+        MENUS
+    -->
+    <div class="listaMenus">
+        <div *ngFor="let funcionalidade of listaFuncionalidades" (click)="trocarComponente(funcionalidade.nome)">            
+            <div><img src="{{funcionalidade.logo}}" alt=""></div>
+            <span>{{funcionalidade.nome}}</span>
+        </div>
+        <button class="btnDeslogar" (click)="deslogar()">Deslogar</button>
+    </div>    
+
+    <!-- 
+        COUNTEUDO DO MENU
+    -->
+    <div class="conteudo">
+        <div class="corpoConteudo">
+            <ng-template #conteudo></ng-template>
+        </div>
+    </div>
+    
+</div>

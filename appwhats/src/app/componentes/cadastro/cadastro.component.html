@@ -1,0 +1,36 @@
+<div class="corpoLogin">
+    <div>
+        <!-- Area do titulo -->
+        <div class="titulo">
+            <span>Cadastro</span>
+        </div>
+
+        <!-- Area da inclusao dos dados -->
+        <div class="dados">
+            <div class="dadosAreaEntradaTexto">
+                <label for="usuario">
+                    Usuário:
+                </label>
+                <input type="text" name="usuario" id="usuario" placeholder="Digite o seu usuário" [(ngModel)]="this.usuarioTela.login">
+            </div>
+            <div class="dadosAreaEntradaTexto">
+                <label for="senha">
+                    Senha:
+                </label>
+                <input type="password" name="senha" id="senha" placeholder="Digite a sua senha" [(ngModel)]="this.usuarioTela.senha">
+            </div>
+            <div class="dadosAreaEntradaTexto">
+                <label for="apelido">
+                    Apelido:
+                </label>
+                <input type="text" name="apelido" id="apelido" placeholder="Digite o seu apelido" [(ngModel)]="this.usuarioTela.apelido">
+            </div>
+        </div>
+
+        <!-- Area dos botoes -->
+        <div class="botoes">
+            <button class="btn btn-verde" (click)="cadastrar()">Cadastrar</button>
+            <button class="btn btn-verde" (click)="retornarLogin()">Retornar</button>
+        </div>
+    </div>
+</div>
